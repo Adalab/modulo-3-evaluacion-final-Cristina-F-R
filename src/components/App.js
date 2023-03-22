@@ -10,6 +10,7 @@ function App() {
   //varables estado: listacharacters, filter1, filter2
   const [characterList, setcharacterList] = useState([]);
   const [houseFilter, setHouseFilter] = useState('gryffindor');
+  const [nameFilter, setNameFilter] = useState('');
 
   useEffect(() =>{
     getDataApi(houseFilter).then((cleanData) =>{
@@ -22,26 +23,18 @@ function App() {
     setHouseFilter(value);
   }
 
-  // const filteredHouse = () =>{
-  //   getDataApi(houseFilter).then((cleanData) =>{
-  //     console.log(cleanData)
-  //     setcharacterList(cleanData)
-  //   });
-  // };
-      // if(houseFilter === 'gryffindor'){
-      //   setHouseFilter('gryffindor')
-      // }else if(houseFilter === ''){
-      //   setHouseFilter('slytherin')
-      // }else if (houseFilter === ''){
-      //   setHouseFilter('ravenclaw')
-      // }elseis (){
-      //   setHouseFilter('hufflepuff')
-      // }
-    
+  const handleFilterName = (value) =>{
+    setNameFilter(value);
+  }
+
+  const nameFiltered = characterList.filter((eachCharacter) => {
+  return (eachCharacter.name.toLocaleLowerCase().includes(nameFilter.toLocaleLowerCase()))
+});
+ 
 
   return <div className="App">
     <Header/>
-    <Main characterList= {characterList} handleFilterHouse={handleFilterHouse}/>
+    <Main characterList= {nameFiltered} handleFilterHouse={handleFilterHouse} handleFilterName={handleFilterName} />
   </div>;
 }
 

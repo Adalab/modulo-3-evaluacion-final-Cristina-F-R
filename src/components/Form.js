@@ -1,14 +1,18 @@
-const Form = ({handleFilterHouse}) => {
+const Form = ({handleFilterHouse, handleFilterName}) => {
 
-    const handleChange = (ev) =>{
+    const handleChangeHouse = (ev) =>{
         handleFilterHouse(ev.target.value);
     };
 
+    const handleChangeText =(ev) =>{
+        handleFilterName(ev.target.value);
+    }
 
     return(
         <form>
-            <label htmlFor=""> Casa:
-                <select name="" id="" onChange={handleChange}>
+            <label htmlFor="">Escribe un nombre:<input type="text" onChange={handleChangeText}/></label>
+            <label htmlFor=""> Escoge la casa:
+                <select name="" id="" onChange={handleChangeHouse}>
                     <option value="gryffindor">Gryffindor</option>
                     <option value="slytherin">Slytherin</option>
                     <option value="ravenclaw">Ravenclaw</option>
