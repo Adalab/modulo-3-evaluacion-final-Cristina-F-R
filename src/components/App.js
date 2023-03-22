@@ -5,6 +5,8 @@ import '../styles/main.scss';
 import  getDataApi from '../service/Api';
 import Header from './Hader';
 import Main from './Main';
+import { Route, Routes } from 'react-router-dom';
+import CharacterDetail from './CharacterDetail';
 
 function App() {
 
@@ -15,7 +17,6 @@ function App() {
 
   useEffect(() =>{
     getDataApi(houseFilter).then((cleanData) =>{
-      console.log(cleanData)
       setcharacterList(cleanData)
     });
   },[houseFilter]);
@@ -31,11 +32,31 @@ function App() {
   const nameFiltered = characterList.filter((eachCharacter) => {
   return (eachCharacter.name.toLocaleLowerCase().includes(nameFilter.toLocaleLowerCase()))
 });
+
+  const findCharacter = (id) => {
+    return characterList.find((eachCharacter) => eachCharacter.id === id);
+  
+  };
  
 
   return <div className="App">
     <Header/>
-    <Main characterList= {nameFiltered} handleFilterHouse={handleFilterHouse} handleFilterName={handleFilterName} nameFilter={nameFilter}/>
+    <Routes>
+      <Route
+      path= '/' element= {  
+        <Main characterList= {nameFiltered} handleFilterHouse={handleFilterHouse} handleFilterName={handleFilterName} nameFilter={nameFilter} houseFilter={houseFilter}/>
+        }
+      ></Route>
+      
+      <Route path='/character/:id'
+        element={
+        <CharacterDetail findCharacter={findCharacter}/>
+
+        }>
+      </Route>
+    </Routes>
+  
+
   </div>;
 }
 

@@ -4,9 +4,11 @@ import '../styles/Card.scss';
 
 function Card ({eachCharacter}) {
 
+
     return(
+        <>
             <li className='card'>
-                <Link href='' className="card_link">
+                <Link to={`/character/${eachCharacter.id}`} className="card_link">
                     <div className='card_link_imgContainer'>
                         <img 
                         src={eachCharacter.image || placeholder}
@@ -18,6 +20,7 @@ function Card ({eachCharacter}) {
                     <p className="card_link_specie">{eachCharacter.specie}</p>
                 </Link>
             </li>
+        </>
         
     )
 }

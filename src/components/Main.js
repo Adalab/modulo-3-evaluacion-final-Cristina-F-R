@@ -1,10 +1,10 @@
 import Form from './Form';
 import ListCards from './ListCards';
 
-const Main = ({characterList,handleFilterHouse, handleFilterName, nameFilter}) =>{
+const Main = ({characterList,handleFilterHouse, handleFilterName, nameFilter, houseFilter}) =>{
     return(
         <>
-            <Form handleFilterHouse={handleFilterHouse} handleFilterName={handleFilterName} nameFilter={nameFilter}/>
+            <Form handleFilterHouse={handleFilterHouse} handleFilterName={handleFilterName} nameFilter={nameFilter} houseFilter={houseFilter}/>
             <ListCards characterList= {characterList}/>
         </>
     )
