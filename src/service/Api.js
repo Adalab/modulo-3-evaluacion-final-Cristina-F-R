@@ -11,6 +11,8 @@ const getDataApi = (houseFilter) =>{
                 name: eachCharacter.name,
                 specie: eachCharacter.species,
                 alive: eachCharacter.alive,
+                gender: eachCharacter.gender,
+                house: eachCharacter.house,
             };
         }))
         return cleanData;

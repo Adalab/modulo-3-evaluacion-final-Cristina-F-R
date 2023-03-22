@@ -1,7 +1,8 @@
 import Card from './Card';
 import '../styles/CardList.scss';
 
-const ListCards= ({characterList}) => {
+const ListCards= ({characterList}) => { 
+    
 
         const dataHtml = characterList.map((eachCharacter) => { return <Card eachCharacter={eachCharacter} key={eachCharacter.id}/>; })
 

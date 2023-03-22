@@ -1,41 +1,91 @@
-.card{
-    margin: 1rem;
-    width: 300px;
-    height: 600px;
-    background-color: rgb(35, 2, 2);
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    list-style: none;
-    border-radius: 35px;
+ .card {
+     margin: 0.2rem;
+     width: 100px;
+     height: 200px;
+     background-color: rgb(35, 2, 2);
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+     list-style: none;
+     border-radius: 5px;
 
-    &_link{
-        text-decoration: none;
-        text-align: center;
+     &_link {
+         text-decoration: none;
+         text-align: center;
 
-        &_imgContainer{
-                width: 300px;
-                height: 400px;
-                overflow: hidden;
-            &_img {
-                width: 300px;
-                  
-                }
-        }
+         &_imgContainer {
+             width: 100px;
+             height: 135px;
+             overflow: hidden;
 
-            &_name {
-                padding: 15px;
-                color: wheat;
-                font-size: 30px;
-                font-weight: bold;
-                text-transform: uppercase;
-            }
-        
-            &_specie {
-                color: wheat;
-                font-size: 25px;
-            }
+             &_img {
+                 width: 100px;
+                 height: 135px;
 
-    }
+             }
+         }
 
-    
+         &_name {
+             padding: 5px;
+             color: wheat;
+             font-size: 12px;
+             font-weight: bold;
+             text-transform: uppercase;
+         }
+
+         &_specie {
+             color: wheat;
+             font-size: 10px;
+         }
+
+     }
+
+
  }
 
+    @media (min-width: 768px) {}
+
+    
+
+    @media (min-width: 1300px) {
+        .card {
+                margin: 1rem;
+                width: 250px;
+                height: 600px;
+                background-color: rgb(35, 2, 2);
+                font-family: Verdana, Geneva, Tahoma, sans-serif;
+                list-style: none;
+                border-radius: 35px;
+        
+                &_link {
+                    text-decoration: none;
+                    text-align: center;
+        
+                    &_imgContainer {
+                        width: 250px;
+                        height: 400px;
+                        overflow: hidden;
+        
+                        &_img {
+                            width: 250px;
+                            height: 350px;
+        
+                        }
+                    }
+        
+                    &_name {
+                        padding: 15px;
+                        color: wheat;
+                        font-size: 30px;
+                        font-weight: bold;
+                        text-transform: uppercase;
+                    }
+        
+                    &_specie {
+                        color: wheat;
+                        font-size: 25px;
+                    }
+        
+                }
+        
+        
+            }
+    }

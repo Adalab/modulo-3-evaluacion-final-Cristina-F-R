@@ -1,0 +1,16 @@
+.form{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 20px;
+
+    &_label{
+        padding: 10px;
+
+        &_input {
+            height: 25px;
+            font-size: 18px;
+            padding: 0 5px;
+        }
+    }
+
+    
+}

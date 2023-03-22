@@ -1,0 +1,58 @@
+.divternario{
+    display: flex;
+}
+.icon_carddetail{
+    width: 20px;
+    display: inline-block;
+}
+.text_carddetail{
+    display: inline-block;
+}
+
+.carddetail_nav {
+    font-size: 20px;
+    margin: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(68, 1, 1);
+    color:wheat;
+    padding: 15px;
+    border-top: rgb(149, 99, 99)solid 3px;
+    border-left: rgb(149, 99, 99)solid 3px;
+    border-right: rgb(0, 0, 0)solid 3px;
+    border-bottom: rgb(0, 0, 0)solid 3px;
+    border-radius: 5px;
+    width: fit-content;
+}
+.carddetail{
+    background-color: rgba(68, 1, 1, 0.708);
+    width: 75%;
+    margin: auto;
+    border-radius: 25px;
+    color:wheat;
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 25px;
+    &_carddetail_link{
+            &_imgContainer{
+                &_img{
+                    width: 250px;
+
+                }
+            &_specie{
+
+            }
+            &_house{
+
+            }
+            &_gender{
+
+            }
+            &_alive{
+
+            }
+        }
+        }
+}
+
+
+

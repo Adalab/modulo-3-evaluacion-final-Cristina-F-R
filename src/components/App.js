@@ -28,35 +28,40 @@ function App() {
   const handleFilterName = (value) =>{
     setNameFilter(value);
   }
-
+  
   const nameFiltered = characterList.filter((eachCharacter) => {
-  return (eachCharacter.name.toLocaleLowerCase().includes(nameFilter.toLocaleLowerCase()))
+  return (eachCharacter.name.toLocaleLowerCase().includes(nameFilter.toLocaleLowerCase())) 
 });
+
+
 
   const findCharacter = (id) => {
     return characterList.find((eachCharacter) => eachCharacter.id === id);
   
   };
  
+  const handleOnSubmit=(ev)=>{
+        ev.preventDefault()
+    }
 
   return <div className="App">
     <Header/>
-    <Routes>
-      <Route
-      path= '/' element= {  
-        <Main characterList= {nameFiltered} handleFilterHouse={handleFilterHouse} handleFilterName={handleFilterName} nameFilter={nameFilter} houseFilter={houseFilter}/>
-        }
-      ></Route>
-      
-      <Route path='/character/:id'
-        element={
-        <CharacterDetail findCharacter={findCharacter}/>
+    <main className='main'>
+      <Routes>
+        <Route
+        path= '/' element= {  
+          <Main characterList= {nameFiltered} handleFilterHouse={handleFilterHouse} handleFilterName={handleFilterName} nameFilter={nameFilter} houseFilter={houseFilter} handleOnSubmit={handleOnSubmit} nameFiltered={nameFiltered}/>
+          }
+        ></Route>
+        
+        <Route path='/character/:id'
+          element={
+          <CharacterDetail findCharacter={findCharacter}/>
 
-        }>
-      </Route>
-    </Routes>
-  
-
+          }>
+        </Route>
+      </Routes>
+    </main>
   </div>;
 }
 
