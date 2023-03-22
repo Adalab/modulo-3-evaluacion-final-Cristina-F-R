@@ -1,3 +1,5 @@
+
+
 const getDataApi = (houseFilter) =>{
     return fetch(`https://hp-api.onrender.com/api/characters/house/${houseFilter}`)
     .then((response) => response.json())

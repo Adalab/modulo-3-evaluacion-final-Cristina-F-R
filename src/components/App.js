@@ -1,6 +1,7 @@
 
 import { useEffect, useState } from 'react';
 import '../styles/App.scss';
+import '../styles/main.scss';
 import  getDataApi from '../service/Api';
 import Header from './Hader';
 import Main from './Main';
@@ -34,7 +35,7 @@ function App() {
 
   return <div className="App">
     <Header/>
-    <Main characterList= {nameFiltered} handleFilterHouse={handleFilterHouse} handleFilterName={handleFilterName} />
+    <Main characterList= {nameFiltered} handleFilterHouse={handleFilterHouse} handleFilterName={handleFilterName} nameFilter={nameFilter}/>
   </div>;
 }
 
