@@ -24,29 +24,31 @@ const CharacterDetail = ({findCharacter}) =>{
                             className="carddetail_link_imgContainer_img" 
                             title="Fotografia del personaje"/>
                 </div>
-                <h2 className="carddetail_link_name">Nombre: {charactersFound.name}</h2>
-                <p className="carddetail_link_specie">Especie: {charactersFound.specie}</p>
-                <p className="carddetail_link_house">Casa: {charactersFound.house}</p>
-                <p className="carddetail_link_gender">Género: {charactersFound.gender}</p>
-                <div className="carddetail_link_alive">Estado: {charactersFound.alive ? 
-                    <div className='divternario'>
-                        <p className='text_carddetail'>'Vivo/a'</p>
-                        <img 
-                                src={heart}
-                                alt='corazón'
+                <div>
+                    <h2 className="carddetail_link_name">Nombre: {charactersFound.name}</h2>
+                    <p className="carddetail_link_specie">Especie: {charactersFound.specie}</p>
+                    <p className="carddetail_link_house">Casa: {charactersFound.house}</p>
+                    <p className="carddetail_link_gender">Género: {charactersFound.gender}</p>
+                    <div className="carddetail_link_alive">Estado: {charactersFound.alive ? 
+                        <div className='divternario'>
+                            <p className='text_carddetail'>'Vivo/a'</p>
+                            <img 
+                                    src={heart}
+                                    alt='corazón'
+                                    className='icon_carddetail'
+                                    title="corazón"/>
+                        </div> 
+                        : 
+                        <div className='divternario'>
+                            <p className='text_carddetail'>'Muerta/o'</p>
+                            <img 
+                                src={skull}
+                                alt='skull'
                                 className='icon_carddetail'
-                                title="corazón"/>
-                    </div> 
-                    : 
-                    <div className='divternario'>
-                        <p className='text_carddetail'>'Muerta/o'</p>
-                        <img 
-                            src={skull}
-                            alt='skull'
-                            className='icon_carddetail'
-                            title="skull"/>
-                            </div>
-                            }
+                                title="skull"/>
+                                </div>
+                                }
+                    </div>
                 </div>
             </div>
          </div> 
