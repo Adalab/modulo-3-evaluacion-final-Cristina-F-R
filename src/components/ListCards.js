@@ -8,7 +8,7 @@ const ListCards= ({characterList}) => {
 
     return (
         <section className="list">
-            <ul className="cards">{dataHtml}</ul>
+            <ul className="list_cards">{dataHtml}</ul>
         </section>
     )
 }

@@ -1,21 +1,10 @@
-.divternario{
-    display: flex;
-}
-.icon_carddetail{
-    width: 20px;
-    display: inline-block;
-}
-.text_carddetail{
-    display: inline-block;
-}
-
 .carddetail_nav {
-    font-size: 20px;
-    margin: 20px;
+    font-size: 15px;
+    margin: 5px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: rgb(68, 1, 1);
     color:wheat;
-    padding: 15px;
+    padding: 10px;
     border-top: rgb(149, 99, 99)solid 3px;
     border-left: rgb(149, 99, 99)solid 3px;
     border-right: rgb(0, 0, 0)solid 3px;
@@ -23,38 +12,144 @@
     border-radius: 5px;
     width: fit-content;
 }
+a:link,a:visited,a:active {
+    text-decoration: none;
+}
+
 .carddetail{
     background-color: rgba(68, 1, 1, 0.708);
-    width: 75%;
+    width: 90%;
     margin: auto;
-    border-radius: 25px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 55px;
     color:wheat;
-    font-size: 20px;
+    font-size: 12px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     padding: 25px;
     display:grid;
     grid-template-columns:  1fr 2fr;
-    &_carddetail_link{
+    overflow-wrap: normal;
+    border-style: double;
+    outline: 1px solid rgb(68, 1, 1);
+    outline-offset: 1px;
+
             &_imgContainer{
                 &_img{
-                    width: 250px;
-
+                    width: 30vw;
+                    margin-right: 3px;
                 }
-            // &_specie{
+              }
+            &_name{
+                font-size: 12px;
+                width: 90%;
+                font-weight: bold;
+                text-transform: uppercase;
+                word-wrap: normal;
+            }
 
-            // }
-            // &_house{
-
-            // }
-            // &_gender{
-
-            // }
-            // &_alive{
-
-            // }
-        }
+             &_divternario{
+                 display: inline;
+                        &_text{
+                             display: inline;
+                            }
+                        
+                        &_icon{
+                            width: 10px;
+                            padding-left: 3px;
+                        }
+                     }
+             &_divHouse{
+                 &_img{
+                width: 30%;
+                padding-top: 5%;
+             }
         }
 }
 
+@media (min-width: 768px) {
+    .carddetail_nav {
+            font-size: 18px;
+            margin: 10px;
+            padding: 10px;
+        }
 
+        .carddetail {
+            width: 80%;
+            border-bottom-left-radius: 25px;
+            border-bottom-right-radius: 95px;
+            font-size: 18px;
+            padding: 25px;
+            border-style: double;
+            outline: 1px solid rgb(68, 1, 1);
+            outline-offset: 3px;
+    
+            &_imgContainer {
+                margin-right: 15px;
+                 &_img {
+                     max-width: 350px;
+                 }
+            }
+    
+            &_name {
+                margin-bottom: 5px;
+                font-size: 15px;
+                width: 90%;
+                font-weight: bold;
+                text-transform: uppercase;
+                word-wrap: normal;
+            }
 
+            &_divternario {
+
+                &_icon {
+                    width: 18px;
+                    padding-left: 5px;
+                }
+            }
+    
+            &_divHouse {
+                &_img {
+                    width: 30%;
+                }
+            }
+        }
+}
+
+@media (min-width: 1200px) {
+        .carddetail_nav {
+                font-size: 20px;
+
+            }
+        
+            .carddetail {
+                width: 60%;
+                border-bottom-left-radius: 45px;
+                border-bottom-right-radius: 115px;
+                font-size: 20px;
+                padding: 25px;
+        
+                &_imgContainer {
+                    margin-right: 25px;
+
+                }
+        
+                &_name {
+                    margin-bottom: 15px;
+                    font-size: 20px;
+                }
+
+                &_divternario {
+                    &_icon {
+                        width: 20px;
+                        padding-left: 15px;
+                    }
+                }
+        
+                &_divHouse {
+                    &_img {
+                       max-width: 200px;
+                    }
+                }
+            }
+    
+}
