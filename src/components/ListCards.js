@@ -12,7 +12,4 @@ const ListCards= ({characterList}) => {
         </section>
     )
 }
-    
-
-
 export default ListCards;
