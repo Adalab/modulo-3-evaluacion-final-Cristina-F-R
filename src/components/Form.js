@@ -1,6 +1,6 @@
 import '../styles/Form.scss';
 
-const Form = ({handleFilterHouse, handleFilterName, nameFilter, houseFilter, handleOnSubmit}) => {
+const Form = ({handleFilterHouse, handleFilterName, nameFilter, houseFilter, handleOnSubmit, handleClick}) => {
 
     const handleChangeHouse = (ev) =>{
         ev.preventDefault();
@@ -28,6 +28,7 @@ const Form = ({handleFilterHouse, handleFilterName, nameFilter, houseFilter, han
                     <option value="hufflepuff">Hufflepuff</option>
                 </select>
             </label>
+            <button className='btn' onClick={handleClick}>Reset</button>
             
         </form>
     )

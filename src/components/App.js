@@ -43,6 +43,12 @@ function App() {
   const handleOnSubmit=(ev)=>{
         ev.preventDefault()
     }
+  
+
+  const handleClick = () =>{   
+    setHouseFilter ('gryffindor')
+    setNameFilter ('')
+  }
 
   return <div className="App">
     <Header/>
@@ -50,7 +56,7 @@ function App() {
       <Routes>
         <Route
         path= '/' element= {  
-          <Main characterList= {nameFiltered} handleFilterHouse={handleFilterHouse} handleFilterName={handleFilterName} nameFilter={nameFilter} houseFilter={houseFilter} handleOnSubmit={handleOnSubmit} nameFiltered={nameFiltered}/>
+          <Main characterList= {nameFiltered} handleFilterHouse={handleFilterHouse} handleFilterName={handleFilterName} nameFilter={nameFilter} houseFilter={houseFilter} handleOnSubmit={handleOnSubmit} nameFiltered={nameFiltered} handleClick={handleClick}/>
           }
         ></Route>
         
