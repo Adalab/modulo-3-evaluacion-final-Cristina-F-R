@@ -1,70 +1,23 @@
-# Getting Started with Create React App
+# HARRY POTTER'S CHARACTER WEB:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Our objective with this web projects was to create a search engine to find informtion abour Harry Potter's characters. The user can filted by name or by the house the character is belonged. 
 
-## Available Scripts
 
-In the project directory, you can run:
+## Technologies used:
 
-### `npm start`
+The technologies we used are: React and Scss.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## How was it made and how it works: 
 
-### `npm test`
+This project was made with [Create React App](https://github.com/facebook/create-react-app).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+I used the React template kit provided by Adalab to create the file structure. Then, I created the necessary components for the web and made the links between them to be fully functional. 
 
-### `npm run build`
+The web conects to an Api ( https://hp-api.onrender.com/ ) to get the information asked. Firt of all, it charges the Character list from Gryffindor House and the user can filter and change the list by writting on the form and/or selecting a different House. If the user searches for a name that is not matching with any character the web will show a message to inform the user of it. The search engine works as well when the user writtes in uppercase. If the user does a asearch and want to expand the information proportiones by the list he can click to a card and it will show further information on a different URL (a dinamic one for each character). When the user is on that detailed card he can go back to the landing page by clickin on a button and the landing page will keep the previous searched elements. 
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Bonus:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- I used grid to made the list of card showed on the landing page.
+- All the page hace a responsive design that adapts to different screen sizes. 
+- The detailed cards shows a different icon depending on the state of the character (an skull for the death ones and a heart for the alive ones) and it shows the emblem of the house to which the character belongs.
