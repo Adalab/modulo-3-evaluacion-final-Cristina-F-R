@@ -21,4 +21,4 @@ The web conects to an Api ( https://hp-api.onrender.com/ ) to get the informatio
 - I used grid to made the list of card showed on the landing page.
 - All the page hace a responsive design that adapts to different screen sizes. 
 - The detailed cards shows a different icon depending on the state of the character (an skull for the death ones and a heart for the alive ones) and it shows the emblem of the house to which the character belongs.
-- I have a reset button that resets the searchet elements ande returns the default card list.
+- There is a reset button that resets the searchet elements ande returns the default card list.
