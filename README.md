@@ -1,6 +1,6 @@
 # HARRY POTTER'S CHARACTER WEB:
 
-Our objective with this web projects was to create a search engine to find informtion abour Harry Potter's characters. The user can filted by name or by the house the character is belonged. 
+The objective was to create a search engine to find informtion abour Harry Potter`s characters. The user can filter by name or by the house where the character belongs.
 
 
 ## Technologies used:
